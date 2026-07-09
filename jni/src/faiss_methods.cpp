@@ -30,7 +30,7 @@ faiss::IndexIDMapTemplate<faiss::IndexBinary>* FaissMethods::indexBinaryIdMap(fa
     return new faiss::IndexBinaryIDMap(index);
 }
 
-void FaissMethods::writeIndex(const faiss::Index* idx, faiss::IOWriter* writer) {
+void FaissMethods::writeIndex(const faiss::Index* idx, faiss::IOWriter* writer, bool skipFlat) {
     faiss::write_index(idx, writer);
 }
 

@@ -147,7 +147,7 @@ TEST(FaissCreateIndexTest, BasicAssertions) {
         .Times(1);
     EXPECT_CALL(mockIndexService, insertToIndex(dim, numIds / insertions, 0, _, _, _))
         .Times(insertions);
-    EXPECT_CALL(mockIndexService, writeIndex(_, _))
+    EXPECT_CALL(mockIndexService, writeIndex(_, _, _))
         .Times(1);
 
     createIndexIteratively(&mockJNIUtil,
@@ -199,7 +199,7 @@ TEST(FaissCreateBinaryIndexTest, BasicAssertions) {
         .Times(1);
     EXPECT_CALL(mockIndexService, insertToIndex(dim, numIds / insertions, 0, _, _, _))
         .Times(insertions);
-    EXPECT_CALL(mockIndexService, writeIndex(_, _))
+    EXPECT_CALL(mockIndexService, writeIndex(_, _, _))
         .Times(1);
 
     // This method calls delete vectors at the end
